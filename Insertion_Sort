@@ -3,27 +3,39 @@ Patika Academy --> Veri Yapıları ve Algoritmalar --> Insertion Sort Projesi
 _____________Proje 1_____________
 
 Soru 1) [22,27,16,2,18,6] -> Insertion Sort 
-
+____________________________________________________________________________________________________________________________________________________________________
 Soru 1a) Yukarı verilen dizinin sort türüne göre aşamalarını yazınız.
 Cevap 1a)  
-    - 0. Aşama:[22,27,16,2,18,6]  --> İlk aşamada inputların bulunduğu n tane veri kümesi.
+    - 1. Aşama:[22,27,16,2,18,6]  --> İlk aşamada inputların bulunduğu n tane işlem vardır.
                |_______________|
                       n
-    - 1. Aşama:[2,22,27,16,18,6]
-               |_||____________|
+    - 2. Aşama:[2,27,16,22,18,6]  --> İkinci aşamada inputların bulunduğu verileri sıralamaya devam eder ve bir sonraki gelecek olanı "n-1" tane işlem yaparak arar. . 
+               |_||____________|      Burada ikinci aşamada 2'yi buldu ve 22 ile yer değiştirdi 
                 n       n-1
 
-    - 2. Aşama: [2,6,22,27,16,18]
-                |___||_________|
+    - 3. Aşama: [2,6,16,22,18,27] --> Üçüncü aşamada inputların bulunduğu verileri sıralamaya devam eder ve bir sonraki gelecek olanı "n-2" tane işlem yaparak arar. 
+                |___||_________|      Burada ikinci aşamada 6'yı buldu 27 ile yer değiştirdi. 
                   n      n-2
-    - 3. Aşama:[2,6,16,22,27,18]
-              |_____||__________|
-                n        n-3
-    - 4.Aşama:[2,6,16,22,27,18]
+    - 4. Aşama:[2,6,16,18,22,27]  --> Dördüncü aşamada inputların bulunduğu verileri sıralamaya devam eder ve bir sonraki gelecek olanı "n-3" tane işlem yaparak arar. 
+               |_____||________|      Burada 16'yı buldu. 
+                 n        n-3
+    - 5.Aşama:[2,6,16,18,22,27]   --> Beşinci aşamada bir sonraki sırlanacak olanı "n-4" tane işlem yaparak arar. Mevcut yerinde bulduğu için yer değiştirmeden 18'yi buldu.
               |________||_____|
                   n       n-4
-    -5.Aşama: [2,6,16,22,18,27
-2a) Big-O gösterimini yazınız. 
+    - 6.Aşama: [2,6,16,18,22,27] --> Altıncı aşamada bir sonraki sıralanacak olanı "n-5" tane işlem yaparak arar. Mevcut yerinde bulduğu için yer değiştirmeden 22'yi buldu.
+               |___________||__|
+                     n       n-5
 
-
-O(n^2)
+    - 7.Aşama: [2,6,16,18,22,27] --> Yedinci aşamada bir sonraki sıralama değerini bulana kadar devam etti. Burada 27'yi buldu.
+____________________________________________________________________________________________________________________________________________________________________
+Soru 2a) Big-O gösterimini yazınız. 
+Cevap 2b)n tane işlem, (n-1) tane işlem, (n-2) tane işlem şeklinde 1'e kadar işlem yapacak kaç tane işlem var ise geriye dönerek işlem yapacak.
+- n+(n-1)+(n-2)+(n-3)+(n-4)+(n-5)+1=(n*(n+1))/2 -->O(n^2)
+____________________________________________________________________________________________________________________________________________________________________
+Soru 3a)Time Complexity: Dizi sıralandıktan sonra 18 sayısı aşağıdaki case'lerden hangisinin kapsamına girer? Yazınız
+- Average case: Aradığımız sayının ortada olması
+- Worst case: Aradığımız sayının sonda olması
+- Best case: Aradığımız sayının dizinin en başında olması.
+Cevap 3a) Average Case
+____________________________________________________________________________________________________________________________________________________________________
+bO
