@@ -38,4 +38,10 @@ Soru 3a)Time Complexity: Dizi sıralandıktan sonra 18 sayısı aşağıdaki cas
 - Best case: Aradığımız sayının dizinin en başında olması.
 Cevap 3a) Average Case
 ____________________________________________________________________________________________________________________________________________________________________
-Bonus)
+Soru Bonus) [7,3,5,8,2,9,4,15,6] dizisinin Selection Sort'a göre ilk 4 adımını yazınız.
+Cevap Bonus)[2,3,5,8,7,9,4,15,6]
+            [2,3,5,8,7,9,4,15,6]
+            [2,3,4,8,7,9,5,15,6]
+            [2,3,4,6,7,9,5,15,8]
+
+            
